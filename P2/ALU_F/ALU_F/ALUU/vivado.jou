@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Oct 11 08:30:14 2023
+# Process ID: 8736
+# Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/ALU_F/ALU_F/ALUU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18340 D:\Estudio\OneDrive - Universidad de Antioquia\Estudio\Materias\S5\Digitales I\Laboratorio\P2\ALU_F\ALU_F\ALUU\ALUU.xpr
+# Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/ALU_F/ALU_F/ALUU/vivado.log
+# Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/ALU_F/ALU_F/ALUU\vivado.jou
+# Running On: DESKTOP-JK32J40, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 14913 MB
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/ALU_F/ALU_F/ALUU/ALUU.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_ALU.tcl
+set_property -name {xsim.simulate.runtime} -value {20000ns} -objects [get_filesets sim_1]
+launch_simulation -mode post-synthesis -type timing
+source tb_ALU.tcl
+current_sim simulation_1
+close_sim
+launch_simulation
+launch_simulation
+close_sim
+launch_simulation -mode post-synthesis -type timing
+launch_simulation
+source tb_ALU.tcl
+close_sim
+launch_simulation
+source tb_ALU.tcl
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property -name {xsim.simulate.runtime} -value {20480ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_ALU.tcl
+close_sim

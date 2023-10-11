@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../fulladder_dataflow.vhd" \
+"../../../../../rca_dataflow .vhd" \
+"../../../../../tutorial_tb.vhd" \
+
+# Do not sort compile order
+nosort
