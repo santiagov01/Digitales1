@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Oct 29 19:18:10 2023
+# Process ID: 24888
+# Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8520 D:\Estudio\OneDrive - Universidad de Antioquia\Estudio\Materias\S5\Digitales I\Laboratorio\P3\Parte2\Intento2\P_3\Parte2_pr3\Parte2_pr3.xpr
+# Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/vivado.log
+# Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3\vivado.jou
+# Running On: DESKTOP-JK32J40, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 14913 MB
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.xpr}
+update_compile_order -fileset sources_1
+file mkdir D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new
+file mkdir D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new
+file mkdir D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new
+file mkdir D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new
+file mkdir D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new
+file mkdir {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new}
+close [ open {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new/practica3_testb.vhd} w ]
+add_files -fileset sim_1 {{D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.srcs/sim_1/new/practica3_testb.vhd}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1

@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Parte2_pr3.srcs/sources_1/new/ALU.vhd" \
+"../../../../Parte2_pr3.srcs/sources_1/new/FF.vhd" \
+"../../../../Parte2_pr3.srcs/sources_1/new/ROM.vhd" \
+"../../../../Parte2_pr3.srcs/sources_1/new/clock.vhd" \
+"../../../../../deco_display.vhd" \
+"../../../../Parte2_pr3.srcs/sources_1/new/driver_triestado.vhd" \
+"../../../../Parte2_pr3.srcs/sources_1/new/main.vhd" \
+"../../../../Parte2_pr3.srcs/sim_1/new/practica3_testb.vhd" \
+
+# Do not sort compile order
+nosort

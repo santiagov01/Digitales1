@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Oct 13 21:58:30 2023
+# Process ID: 4216
+# Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/Punto3/ALU_F/ALU_F.runs/synth_1
+# Command line: vivado.exe -log ALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+# Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/Punto3/ALU_F/ALU_F.runs/synth_1/ALU.vds
+# Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/Punto3/ALU_F/ALU_F.runs/synth_1\vivado.jou
+# Running On: DESKTOP-JK32J40, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 14913 MB
+#-----------------------------------------------------------
+source ALU.tcl -notrace

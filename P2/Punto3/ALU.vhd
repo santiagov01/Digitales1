@@ -1,101 +1,80 @@
-----------------------------------------------------------------------------------
---Module Name: ALU Grupo 4
-----------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-library UNISIM;
-use UNISIM.VComponents.all;
+use STD.textio.all;
+use IEEE.std_logic_textio.all;
 
 entity ALU is
-    Port ( 
-    BUS_A : in STD_LOGIC_VECTOR (3 downto 0);
-           BUS_B : in STD_LOGIC_VECTOR (3 downto 0);
-           control: in STD_LOGIC_VECTOR (1 downto 0);
-           salidas : inout STD_LOGIC_VECTOR (3 downto 0);--Salida de la ALU
-           carry : out STD_LOGIC;
-	       config_display : out std_logic_vector(3 downto 0);
-           display: out std_logic_vector (6 downto 0)--Decodifica el display
-           );
+    port(
+        entradaControl: in std_logic_vector(1 downto 0); 
+        BUSA,BUSB: in std_logic_vector(3 downto 0);
+        SalidaAlu: out std_logic_vector(3 downto 0);
+        carry: out std_logic ;
+        Salida7seg: out std_logic_vector(6 downto 0) 
+    );
 end ALU;
 
-architecture Behavioral of ALU is
-
-signal suma: std_logic_vector(4 downto 0);
-signal sal_xor,div :std_logic_vector(3 downto 0);
-signal multiplic: std_logic_vector (4 downto 0);
-signal entradas_dec: std_logic_vector (3 downto 0);
-signal salida_7: std_logic_vector (6 downto 0);
-
+architecture Behavioral of ALU is  
 begin
-config_display(0) <= '0';
-config_display(1) <= '1';
-config_display(2) <= '1';
-config_display(3) <= '1';
-process(control,salidas)
-    begin 
-        case(control) is
-            when "11" => 
-            multiplic <= ('0' & BUS_A) + ('0' & BUS_A);
-            	salidas <= multiplic(3 downto 0);
-            	carry <= multiplic(4);
-            when "10" =>
-            	div <= '0' & BUS_B(3 downto 1);
-            	salidas <= div;
-            	carry <= '0';
-            when "01" =>
-            	sal_xor <= BUS_A xor BUS_B;
-            	salidas <= sal_xor;
-            	carry <= '0';
-            when "00" =>
-            	suma <= ('0' & BUS_A) + ('0' & BUS_B);
-            	salidas <= suma (3 downto 0);
-            	carry <= suma(4);
-            when others =>
-            	salidas <= "0000";
-            	carry <= '0';
-                      		 	         
-         end case;
-
-         case(salidas) is
-            when x"0" =>
-             display <= "0000001";
-             when x"1" =>
-             display <= "1001111";
-             when x"2" =>
-             display <= "0000001";
-             when x"3" =>
-             display <= "0000001";
-             when x"4" =>
-             display <= "0010010";
-             when x"5" =>
-             display <= "0000110";
-             when x"6" =>
-             display <= "1001100";
-             when x"7" =>
-             display <= "0001111";
-             when x"8" =>
-             display <= "0000000";
-             when x"9" =>
-             display <= "0000100";
-             when x"A" =>
-             display <= "0001000";
-             when x"b" =>
-             display <= "1100000";
-             when x"C" =>
-             display <="0110001";
-             when x"d" =>
-             display <= "0100100";
-             when x"e" =>
-             display <= "0010000" ;
-             when x"F" =>
-             display <= "0111000";
-             when others =>
-             display <="0000000" ;
-       end case; 
+    process(BUSA,BUSB,entradaControl)
+    variable salidaAux: std_logic_vector(3 downto 0);
+    variable suma: std_logic_vector (4 downto 0);
+    variable Multiplicacion: std_logic_vector(7 downto 0); 
+    variable Multiplicacion2: std_logic_vector(3 downto 0);
+    begin
+        case entradaControl is
+        when "00" =>
+            suma := ('0'&BUSA) + ('0'&BUSB);
+            salidaAux:=suma(3 downto 0);
+            carry <= suma(4);
+        when "01" =>
+            multiplicacion2:= BUSA xor BUSB;
+            salidaAux:=multiplicacion2(3 downto 0);
+            carry <='0';
+        when "10" =>
+            salidaAux:= '0'&BUSA(3)&BUSA(2)&BUSA(1);
+            carry <= '0';
+        when others=>--"11"
+            multiplicacion:= (BUSB) * "0010";
+            salidaAux:=multiplicacion(3 downto 0); 
+            carry <= multiplicacion (4);
+        end case;
+        salidaAlu<=salidaAux;
+        case salidaAux is
+        when "0000"=>
+            salida7seg<="0000001";
+        when "0001"=>
+            salida7seg<="1001111";
+        when "0010"=>
+            salida7seg<="0010010";
+        when "0011"=>
+            salida7seg<="0000110";
+        when "0100"=>
+            salida7seg<="1001100";
+        when "0101"=>
+            salida7seg<="0100100";
+        when "0110"=>
+            salida7seg<="1100000";
+        when "0111"=>
+            salida7seg<="0001110";
+        when "1000"=>
+            salida7seg<="0000000";
+        when "1001"=>
+            salida7seg<="0000100";
+        when "1010"=>
+            salida7seg<="1111110";
+        when "1011"=>
+            salida7seg<="0110000";        
+        when "1100"=>
+            salida7seg<="1101101";
+        when "1101"=>
+            salida7seg<="1111001";   
+        when "1110"=>
+            salida7seg<="0110011";
+        when others=>--"1111"
+            salida7seg<="1011011";
+        end case;
     end process;
-
 end Behavioral;
