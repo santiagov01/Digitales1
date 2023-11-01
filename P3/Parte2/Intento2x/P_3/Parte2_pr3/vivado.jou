@@ -14,3 +14,6 @@
 start_gui
 open_project {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.xpr}
 update_compile_order -fileset sources_1
+launch_simulation
+source practica3_testb.tcl
+close_sim
