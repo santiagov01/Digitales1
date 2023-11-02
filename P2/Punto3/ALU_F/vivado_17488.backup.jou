@@ -3,10 +3,10 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Nov  1 18:46:52 2023
-# Process ID: 1468
+# Start of session at: Fri Oct 27 15:23:50 2023
+# Process ID: 17488
 # Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/Punto3/ALU_F
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20032 D:\Estudio\OneDrive - Universidad de Antioquia\Estudio\Materias\S5\Digitales I\Laboratorio\P2\Punto3\ALU_F\ALU_F.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17448 D:\Estudio\OneDrive - Universidad de Antioquia\Estudio\Materias\S5\Digitales I\Laboratorio\P2\Punto3\ALU_F\ALU_F.xpr
 # Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/Punto3/ALU_F/vivado.log
 # Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P2/Punto3/ALU_F\vivado.jou
 # Running On: DESKTOP-JK32J40, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 14913 MB

@@ -3,17 +3,16 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Nov  1 17:28:40 2023
-# Process ID: 6452
-# Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9720 D:\Estudio\OneDrive - Universidad de Antioquia\Estudio\Materias\S5\Digitales I\Laboratorio\P3\Parte2\Intento2\P_3\Parte2_pr3\Parte2_pr3.xpr
-# Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/vivado.log
-# Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3\vivado.jou
+# Start of session at: Wed Nov  1 18:09:25 2023
+# Process ID: 15664
+# Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2x/P_3/Parte2_pr3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13504 D:\Estudio\OneDrive - Universidad de Antioquia\Estudio\Materias\S5\Digitales I\Laboratorio\P3\Parte2\Intento2x\P_3\Parte2_pr3\Parte2_pr3.xpr
+# Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2x/P_3/Parte2_pr3/vivado.log
+# Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2x/P_3/Parte2_pr3\vivado.jou
 # Running On: DESKTOP-JK32J40, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 14913 MB
 #-----------------------------------------------------------
 start_gui
-open_project {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2/P_3/Parte2_pr3/Parte2_pr3.xpr}
+open_project {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P3/Parte2/Intento2x/P_3/Parte2_pr3/Parte2_pr3.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-source practica3_testb.tcl
-close_sim
+reset_run impl_1
+open_run synth_1 -name synth_1

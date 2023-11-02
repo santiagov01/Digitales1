@@ -33,7 +33,7 @@ end driver_triestado;
 
 architecture Behavioral of driver_triestado is
 begin
-process( control)
+process( control,B0,B1)
     begin
     if(control ='1') then
         sal <= B0;

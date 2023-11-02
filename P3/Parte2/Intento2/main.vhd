@@ -168,6 +168,7 @@ begin
     binary_number=>Q3,
     display=>displayout
     );
+    s7_sg <= displayout;
     
 
 end Behavioral;
