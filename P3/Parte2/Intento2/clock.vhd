@@ -22,8 +22,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
@@ -32,7 +30,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity clock is
---    generic (PERIOD : integer :=5);
     PORT(
         CLK: in std_logic;
         reset: in std_logic;
@@ -44,15 +41,9 @@ architecture Behavioral of clock is
 signal clk_interno : std_logic :='0';
 signal count_clk : integer:=0;
 signal CLK_temp: std_logic:='0';
+
 constant PERIOD : integer := 4;
 begin
---        process (CLK)
---        begin  
---            if (CLK'event and CLK = '1') then
---                clk_interno <= NOT clk_interno;
---            end if;
---        end process;
-        
     process(CLK,reset)
 	begin
 	    clk1 <= CLK_temp;

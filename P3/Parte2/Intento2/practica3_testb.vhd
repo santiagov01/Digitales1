@@ -23,6 +23,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.all;
 
 use STD.textio.all;
 use IEEE.std_logic_textio.all;
@@ -56,7 +57,7 @@ architecture tb of practica3_testb is
     signal en1_sgn       : std_logic:='0';
     signal C_sgn         : std_logic;
     signal breset_sgn    : std_logic;
-    signal S7_sgn     : std_logic_vector (6 downto 0):="0000000";
+    signal S7_sgn     : std_logic_vector (6 downto 0):="1111110";
     signal carry_sgn : std_logic;
 
     constant TbPeriod : time := 10 ns; -- EDIT Put right period here
@@ -64,6 +65,8 @@ architecture tb of practica3_testb is
     signal TbSimEnded : std_logic := '0';
     
     signal reloj2 : std_logic;
+    
+    signal S7_sim : std_logic_vector(6 downto 0):="1111110";
 
 begin
 
@@ -105,6 +108,13 @@ begin
     variable salidaPrueba,salidaAux,prueba2,prueba3: std_logic_vector(3 downto 0):="0000";
     variable s7seg_var: std_logic_vector(6 downto 0);
     variable carryt: std_logic;
+    
+    variable BB_temp, BA_temp: std_logic_vector (3 downto 0):="0000";
+    
+    variable data_rom : STD_LOGIC_VECTOR (3 downto 0);
+    
+    type rom_type_var is array (0 to 7) of std_logic_vector (3 downto 0);
+    constant Memoria_ROM : rom_type_var :=( x"3", x"5", x"7", x"b", x"a", x"9", x"f", x"e");
     begin
 --    B0_sgn <= entradas(3 downto 0);
 --    B1_sgn <= entradas(7 downto 4);
@@ -115,7 +125,7 @@ begin
     for k in 0 to 1 loop--Variar C (solo dos valores
         C_sgn <= C_var;
         C_var:= '1';
-        for j in 0 to 2 loop --Variar selector de operación
+        for j in 0 to 3 loop --Variar selector de operación
             SEL_sgn <= selector_var;
             selector_var := (selector_var +1);
             for h in 0 to 7 loop --Variar address
@@ -125,25 +135,36 @@ begin
                     B0_sgn <= entrada1;
                     B1_sgn <= entrada1;
                     entrada1 := (entrada1) + 1;
+                    -- Enable
                     en0_sgn <= '1';
                     en1_sgn <= '0';
+                    
+                    --Seleccionar BA
+                    if(C_sgn ='1') then
+                        BA_temp := B0_sgn;
+                    else
+                        BA_temp :=B1_sgn;
+                    end if;
+                    
+                    BB_temp := Memoria_ROM(conv_integer(addres_sgn));
+                    
                     wait for 50ns;
 
                     wait for 50ns;
                     case SEL_sgn is
                         when "00" =>
-                            suma := ('0'&B0_sgn) + ('0'&B1_sgn);
+                            suma := ('0'&BA_temp) + ('0'&BB_temp);
                             salidaAux:=suma(3 downto 0);
                             carryt:=suma(4);
                         when "01" =>
-                            multiplicacion2:= B0_sgn xor B1_sgn;
+                            multiplicacion2:= BA_temp xor BB_temp;
            					salidaAux:=multiplicacion2(3 downto 0);
            					carryt:='0';
                         when "10" =>
-                            salidaAux:= '0'&B0_sgn(3)&B0_sgn(2)&B0_sgn(1);
+                            salidaAux:= '0'&BB_temp(3)&BB_temp(2)&BB_temp(1);
                             carryt:='0';
                         when others=>--"11"
-                            multiplicacion:= (B0_sgn) * "0010";
+                            multiplicacion:= (BA_temp) * "0010";
             				salidaAux:=multiplicacion(3 downto 0); 
             				carryt:=multiplicacion(4);
                     end case;
@@ -164,7 +185,7 @@ begin
                         when "0101"=>
                             s7seg_var:="0100100";
                         when "0110"=>
-                            s7seg_var:="1100000";
+                            s7seg_var:="0100000";
                         when "0111"=>
                             s7seg_var:="0001110";
                         when "1000"=>
@@ -181,9 +202,13 @@ begin
                             s7seg_var:="1000010";   
                         when "1110"=>
                             s7seg_var:="0010000";
-                        when others=>--"1111"
+                        when "1111" =>--"1111"
                             s7seg_var:="0111000";
+                        when others =>
+                            s7seg_var:=  "1111110";
                     end case; 
+                    
+                    S7_sim <= s7seg_var;
                     if s7seg_var = S7_sgn then
                         write(linea,string'("Salida del 7 segmentos CORRECTA")); writeline(output,linea);    
                     else
@@ -191,6 +216,9 @@ begin
                     end if;
                     write(linea,string'(" Salida de prueba: "));write(linea,s7seg_var);
                     write(linea,string'(" Salida del 7 segmentos "));write(linea,S7_sgn);writeline(output,linea);
+                    write(linea,string'(" Entrada 1: "));write(linea,BA_temp); write(linea,string'(" Entrada 2: "));write(linea,BB_temp);
+                    write(linea,string'(" Operacion ALU: "));write(linea,conv_integer(SEL_sgn));
+                    writeline(output,linea);
                     wait for 50ns;
                     
                 end loop;

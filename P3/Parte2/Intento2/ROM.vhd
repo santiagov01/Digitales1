@@ -6,7 +6,6 @@ use IEEE.numeric_std.all;
 
 
 entity ROM is
-    --generic();
     PORT(
          addrs : in std_logic_vector (2 downto 0);
          data : out  STD_LOGIC_VECTOR (3 downto 0)

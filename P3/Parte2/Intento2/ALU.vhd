@@ -45,47 +45,13 @@ begin
             salidaAux:=multiplicacion2(3 downto 0);
             carry <='0';
         when "10" =>
-            salidaAux:= '0'&BUSA(3)&BUSA(2)&BUSA(1);
+            salidaAux:= '0'&BUSB(3)&BUSB(2)&BUSB(1);
             carry <= '0';
         when others=>--"11"
-            multiplicacion:= (BUSB) * "0010";
+            multiplicacion:= (BUSA) * "0010";
             salidaAux:=multiplicacion(3 downto 0); 
             carry <= multiplicacion (4);
         end case;
         salidaAlu<=salidaAux;
---        case salidaAux is
---        when "0000"=>
---            SalidaFF<="0000001";
---        when "0001"=>
---            salida7seg<="1001111";
---        when "0010"=>
---            salida7seg<="0010010";
---        when "0011"=>
---            salida7seg<="0000110";
---        when "0100"=>
---            salida7seg<="1001100";
---        when "0101"=>
---            salida7seg<="0100100";
---        when "0110"=>
---            salida7seg<="1100000";
---        when "0111"=>
---            salida7seg<="0001110";
---        when "1000"=>
---            salida7seg<="0000000";
---        when "1001"=>
---            salida7seg<="0000100";
---        when "1010"=>
---            salida7seg<="1111110";
---        when "1011"=>
---            salida7seg<="0110000";        
---        when "1100"=>
---            salida7seg<="1101101";
---        when "1101"=>
---            salida7seg<="1111001";   
---        when "1110"=>
---            salida7seg<="0110011";
---        when others=>--"1111"
---            salida7seg<="1011011";
---        end case;
         end process;
 end Behavioral;
