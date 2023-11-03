@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity clock is
-    generic (PERIOD : integer :=10000);
+    generic (PERIOD : integer :=5);
     PORT(
         CLK: in std_logic;
         reset: in std_logic;
@@ -45,7 +45,14 @@ signal clk_interno : std_logic :='0';
 signal count_clk : integer:=0;
 signal CLK_temp: std_logic:='0';
 begin
-    process(clk_interno)
+        process (CLK)
+        begin  
+            if (CLK'event and CLK = '1') then
+                clk_interno <= NOT clk_interno;
+            end if;
+        end process;
+        
+    process(clk_interno,reset)
 	begin
 		if(clk_interno'event and clk_interno='1') then
 		    if(reset ='1') then

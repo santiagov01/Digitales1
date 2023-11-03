@@ -50,14 +50,14 @@ architecture tb of practica3_testb is
     signal addres_sgn    : std_logic_vector (2 downto 0);
     signal clk_sgn       : std_logic :='0';
     signal SEL_sgn       : std_logic_vector (1 downto 0);
-    signal en0_sgn       : std_logic;
-    signal en1_sgn       : std_logic;
+    signal en0_sgn       : std_logic:='0';
+    signal en1_sgn       : std_logic:='0';
     signal C_sgn         : std_logic;
     signal breset_sgn    : std_logic;
     signal S7_sgn     : std_logic_vector (6 downto 0);
     signal carry_sgn : std_logic;
 
-    constant TbPeriod : time := 5 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 10 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -82,20 +82,57 @@ begin
     clk_sgn <= TbClock;
 
     stimuli : process
-    variable entradas : std_logic_vector (15 downto 0);
-    variable i,j,k : integer;
+    variable entradas : std_logic_vector (13 downto 0);
+    variable i,j,k,h : integer:=0;
+    variable entrada1: std_logic_vector (3 downto 0) :="0000";
+    variable direccion_var : std_logic_vector (2 downto 0) :="000";
+    variable selector_var : std_logic_vector (1 downto 0) :="00";
+    variable C_var : std_logic :='0';
     begin
-    B0_sgn <= entradas(3 downto 0);
-    for i in 0 to 100 loop
-    wait for 500ns;
+--    B0_sgn <= entradas(3 downto 0);
+--    B1_sgn <= entradas(7 downto 4);
+--    SEL_sgn <= entradas(9 downto  8);
+--    addres_sgn <= entradas(12 downto 10);    
+--    C_sgn <= entradas(13);
     
-    wait for 500ns;
-    entradas:= (entradas)+1;
-    wait for 500ns;
-    
-    wait for 500ns;
-    entradas:= (entradas) +2;
+    for k in 0 to 1 loop--Variar C (solo dos valores
+        C_sgn <= C_var;
+        C_var:= '1';
+        for j in 0 to 2 loop --Variar selector de operación
+            SEL_sgn <= selector_var;
+            selector_var := (selector_var +1);
+            for h in 0 to 7 loop --Variar address
+                addres_sgn <= direccion_var;
+                direccion_var := (direccion_var) + 1;
+                for i in 0 to 15 loop --Variar las combinaciones de entrada
+                    B0_sgn <= entrada1;
+                    B1_sgn <= entrada1;
+                    entrada1 := (entrada1) + 1;
+                    wait for 50ns;
+                    en0_sgn <= '1';
+                    en1_sgn <= '0';
+                    wait for 50ns;
+                    
+                    wait for 50ns;
+                    en0_sgn <='0';
+                    en1_sgn <= '1';
+                    wait for 50ns;
+                    
+                end loop;
+            end loop;
+        end loop;
     end loop;
+--    for i in 0 to 100 loop
+--    wait for 5ns;
+--    en0_sgn <= '1';
+--    en1_sgn <= '0';
+--    wait for 5ns;
+--    entradas:= (entradas)+1;
+--    wait for 5ns;
+    
+--    wait for 5ns;
+--    entradas:= (entradas) +2;
+--    end loop;
     end process;
 
 end tb;

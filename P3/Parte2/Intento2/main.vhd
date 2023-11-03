@@ -83,7 +83,7 @@ port(
 END COMPONENT;
 
 COMPONENT clock
-generic (PERIOD : integer:= 10000);
+generic (PERIOD : integer:= 5);
 PORT(
             CLK: in std_logic;
         reset: in std_logic;
