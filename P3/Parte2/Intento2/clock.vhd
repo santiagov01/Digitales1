@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity clock is
-    generic (PERIOD : integer :=5);
+--    generic (PERIOD : integer :=5);
     PORT(
         CLK: in std_logic;
         reset: in std_logic;
@@ -44,19 +44,21 @@ architecture Behavioral of clock is
 signal clk_interno : std_logic :='0';
 signal count_clk : integer:=0;
 signal CLK_temp: std_logic:='0';
+constant PERIOD : integer := 4;
 begin
-        process (CLK)
-        begin  
-            if (CLK'event and CLK = '1') then
-                clk_interno <= NOT clk_interno;
-            end if;
-        end process;
+--        process (CLK)
+--        begin  
+--            if (CLK'event and CLK = '1') then
+--                clk_interno <= NOT clk_interno;
+--            end if;
+--        end process;
         
-    process(clk_interno,reset)
+    process(CLK,reset)
 	begin
-		if(clk_interno'event and clk_interno='1') then
-		    if(reset ='1') then
-		      count_clk <=0;
+	    clk1 <= CLK_temp;
+        if(reset ='1') then
+            count_clk <=0;
+		elsif(CLK'event and CLK='1') then	    
 			if (count_clk = PERIOD) then
 				count_clk <= 0;
 				CLK_temp <= not CLK_temp;
@@ -65,7 +67,6 @@ begin
 				count_clk <= count_clk + 1;
 				end if;
 			end if;
-		end if;
 	end process;
 
 end Behavioral;

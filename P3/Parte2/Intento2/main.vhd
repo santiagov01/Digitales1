@@ -40,7 +40,9 @@ entity main is
         en0, en1: in std_logic;
         C, breset: in std_logic;        --C de control
         S7_sg: out std_logic_vector (6 downto 0);
-        carry_led: out std_logic
+        carry_led: out std_logic;
+        enable_display : out STD_LOGIC_VECTOR(3 DOWNTO 0);
+        clk_2 : out std_logic
      );
 end main;
 
@@ -83,7 +85,7 @@ port(
 END COMPONENT;
 
 COMPONENT clock
-generic (PERIOD : integer:= 5);
+--generic (PERIOD : integer);
 PORT(
             CLK: in std_logic;
         reset: in std_logic;
@@ -117,6 +119,10 @@ port (
 	);
 END COMPONENT;
 
+signal count_clk : INTEGER:=0;
+SIGNAL clk_interno : STD_LOGIC:='0';
+signal clk_PS : STD_LOGIC:='0';
+
 begin
     DRIV3: driver_triestado PORT MAP(
         B0 => B0,
@@ -125,7 +131,9 @@ begin
         sal => BA_temp
     );
     
-    reloj: clock PORT MAP(
+    reloj: clock 
+--    generic map(PERIOD => 10)
+    PORT MAP(
         CLK => clk,
         reset => breset,
         clk1 => clk1_temp    
@@ -166,9 +174,31 @@ begin
     
     DECO: deco_display PORT MAP(
     binary_number=>Q3,
-    display=>displayout
+    display=>s7_sg
     );
-    s7_sg <= displayout;
+    relojx: clock
+    PORT MAP(
+        CLK => clk,
+        reset => breset,
+        clk1 => clk_2    
+    );
+   
+-- Component No.5 	
+--    CLK_DIV2: process(CLK)
+--	begin
+--        clk_2 <= clk_PS;
+--        if(breset ='1') then
+--            count_clk <=0;
+--		elsif(CLK'event and CLK='1') then
+--			if (count_clk = 4) then
+--				count_clk <= 0;
+--				clk_PS <= not clk_PS;
+--				clk_2 <= clk_PS;
+--			else
+--				count_clk <= count_clk +1;
+--			end if;
+--		end if;
+--	end process;
     
 
 end Behavioral;
