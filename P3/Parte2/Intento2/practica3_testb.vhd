@@ -44,8 +44,9 @@ architecture tb of practica3_testb is
               breset    : in std_logic;
               S7_sg     : out std_logic_vector (6 downto 0);
               carry_led : out std_logic;
-              enable_display : out STD_LOGIC_VECTOR(3 DOWNTO 0);
-              clk_2: out std_logic );
+              enable_display : out STD_LOGIC_VECTOR(3 DOWNTO 0)
+              --clk_2: out std_logic 
+              );
     end component;
 
     signal B0_sgn        : std_logic_vector (3 downto 0);
@@ -82,8 +83,9 @@ begin
               breset    => breset_sgn,
               S7_sg     => S7_sgn,
               carry_led => carry_sgn,
-              enable_display => open,
-              clk_2 => reloj2);
+              enable_display => open
+              --clk_2 => reloj2
+              );
     --Generar el reloj
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
 
@@ -139,6 +141,8 @@ begin
                     en0_sgn <= '1';
                     en1_sgn <= '0';
                     
+
+                    wait for 50ns;
                     --Seleccionar BA
                     if(C_sgn ='1') then
                         BA_temp := B0_sgn;
@@ -148,8 +152,6 @@ begin
                     
                     BB_temp := Memoria_ROM(conv_integer(addres_sgn));
                     
-                    wait for 50ns;
-
                     wait for 50ns;
                     case SEL_sgn is
                         when "00" =>
@@ -187,7 +189,7 @@ begin
                         when "0110"=>
                             s7seg_var:="0100000";
                         when "0111"=>
-                            s7seg_var:="0001110";
+                            s7seg_var:="0001111";
                         when "1000"=>
                             s7seg_var:="0000000";
                         when "1001"=>
@@ -207,7 +209,6 @@ begin
                         when others =>
                             s7seg_var:=  "1111110";
                     end case; 
-                    
                     S7_sim <= s7seg_var;
                     if s7seg_var = S7_sgn then
                         write(linea,string'("Salida del 7 segmentos CORRECTA")); writeline(output,linea);    

@@ -44,7 +44,7 @@ signal CLK_temp: std_logic:='0';
 
 constant PERIOD : integer := 4;
 begin
-    process(CLK,reset)
+    process(CLK,reset,CLK_temp)
 	begin
 	    clk1 <= CLK_temp;
         if(reset ='1') then

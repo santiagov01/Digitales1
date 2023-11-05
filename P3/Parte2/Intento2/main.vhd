@@ -30,7 +30,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
-
+library UNISIM;
+use UNISIM.VComponents.all;
 entity main is
     Port (
         B0, B1: in std_logic_vector ( 3 downto 0);
@@ -41,8 +42,8 @@ entity main is
         C, breset: in std_logic;        --C de control
         S7_sg: out std_logic_vector (6 downto 0);
         carry_led: out std_logic;
-        enable_display : out STD_LOGIC_VECTOR(3 DOWNTO 0);
-        clk_2 : out std_logic
+        enable_display : out STD_LOGIC_VECTOR(3 DOWNTO 0)
+        --clk_2 : out std_logic
      );
 end main;
 
@@ -54,7 +55,7 @@ constant x: integer := 4;
 signal BA_temp : std_logic_vector(3 downto 0);
 signal BB_temp : std_logic_vector(3 downto 0);
 signal clk1_temp: std_logic ;
---signal clk1_temp_2: std_logic;
+signal clk2_temp: std_logic;
 signal Q1: std_logic_VECTOR(3 downto 0); --Salida Flip flop 1
 signal Q2: std_logic_VECTOR(3 downto 0); --Salida Flip flop 2
 signal Q3: std_logic_VECTOR(3 downto 0); --Salida Flip flop 3
@@ -138,6 +139,13 @@ begin
         reset => breset,
         clk1 => clk1_temp    
     );
+    reloj2: clock 
+--    generic map(PERIOD => 10)
+    PORT MAP(
+        CLK => clk,
+        reset => breset,
+        clk1 => clk2_temp    
+    );
     FF1: FF PORT MAP(
         D =>BA_temp,
         en => en0,
@@ -167,7 +175,7 @@ begin
      FF3: FF PORT MAP(
         D=>OutAlu,
         en => en1,
-        clk => clk1_temp,
+        clk => clk2_temp,
         Q => Q3        
             
     );
@@ -176,12 +184,13 @@ begin
     binary_number=>Q3,
     display=>s7_sg
     );
-    relojx: clock
-    PORT MAP(
-        CLK => clk,
-        reset => breset,
-        clk1 => clk_2    
-    );
+--    relojx: clock
+
+--    PORT MAP(
+--        CLK => clk,
+--        reset => breset,
+--        clk1 => clk_2    
+--    );
    
 -- Component No.5 	
 --    CLK_DIV2: process(CLK)
