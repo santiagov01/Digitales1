@@ -91,11 +91,7 @@ begin
 
     -- clk_sgn es el que entra a mi componente.
     clk_sgn <= TbClock;
-    
---    generarreloj:
---    process begin
---        clk_sgn <= '1', '0' after TbPeriod:
---        wait for    
+        
     stimuli : process
     variable entradas : std_logic_vector (13 downto 0);
     variable i,j,k,h : integer:=0;
@@ -118,16 +114,12 @@ begin
     type rom_type_var is array (0 to 7) of std_logic_vector (3 downto 0);
     constant Memoria_ROM : rom_type_var :=( x"3", x"5", x"7", x"b", x"a", x"9", x"f", x"e");
     begin
---    B0_sgn <= entradas(3 downto 0);
---    B1_sgn <= entradas(7 downto 4);
---    SEL_sgn <= entradas(9 downto  8);
---    addres_sgn <= entradas(12 downto 10);    
---    C_sgn <= entradas(13);
+
     
     for k in 0 to 1 loop--Variar C (solo dos valores
         C_sgn <= C_var;
         C_var:= '1';
-        for j in 0 to 3 loop --Variar selector de operación
+        for j in 0 to 3 loop --Variar selector de operaci n
             SEL_sgn <= selector_var;
             selector_var := (selector_var +1);
             for h in 0 to 7 loop --Variar address
@@ -153,6 +145,7 @@ begin
                     BB_temp := Memoria_ROM(conv_integer(addres_sgn));
                     
                     wait for 50ns;
+                    --Operaciones ALU
                     case SEL_sgn is
                         when "00" =>
                             suma := ('0'&BA_temp) + ('0'&BB_temp);
@@ -170,9 +163,11 @@ begin
             				salidaAux:=multiplicacion(3 downto 0); 
             				carryt:=multiplicacion(4);
                     end case;
+                    --Enable segunda parte
                     en0_sgn <='0';
                     en1_sgn <= '1';
                     wait for 50ns;
+                    --Decodificador a 7 segmentos
                     case salidaAux is
                         when "0000"=>
                             s7seg_var:="0000001";
@@ -203,12 +198,13 @@ begin
                         when "1101"=>
                             s7seg_var:="1000010";   
                         when "1110"=>
-                            s7seg_var:="0010000";
+                            s7seg_var:="0110000";
                         when "1111" =>--"1111"
                             s7seg_var:="0111000";
                         when others =>
                             s7seg_var:=  "1111110";
                     end case; 
+                    --Validar-------------
                     S7_sim <= s7seg_var;
                     if s7seg_var = S7_sgn then
                         write(linea,string'("Salida del 7 segmentos CORRECTA")); writeline(output,linea);    
@@ -226,17 +222,6 @@ begin
             end loop;
         end loop;
     end loop;
---    for i in 0 to 100 loop
---    wait for 5ns;
---    en0_sgn <= '1';
---    en1_sgn <= '0';
---    wait for 5ns;
---    entradas:= (entradas)+1;
---    wait for 5ns;
-    
---    wait for 5ns;
---    entradas:= (entradas) +2;
---    end loop;
     end process;
 
 end tb;

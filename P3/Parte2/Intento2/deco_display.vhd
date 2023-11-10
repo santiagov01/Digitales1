@@ -56,7 +56,7 @@ with binary_number select
               "1100000" when "1011", -- b 
               "0110001" when "1100", -- C 
               "1000010" when "1101", -- d 
-              "0010000" when "1110", -- E
+              "0110000" when "1110", -- E
               "0111000" when "1111", -- F
               "1111110" when others;
               
