@@ -125,6 +125,11 @@ SIGNAL clk_interno : STD_LOGIC:='0';
 signal clk_PS : STD_LOGIC:='0';
 
 begin
+    enable_display(0) <= '0';
+    enable_display(1) <= '1';
+    enable_display(2) <= '1';
+    enable_display(3) <= '1';
+    
     DRIV3: driver_triestado PORT MAP(
         B0 => B0,
         B1 => B1,

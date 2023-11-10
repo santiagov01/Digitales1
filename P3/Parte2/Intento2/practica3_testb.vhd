@@ -65,7 +65,7 @@ architecture tb of practica3_testb is
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
     
-    signal reloj2 : std_logic;
+ 
     
     signal S7_sim : std_logic_vector(6 downto 0):="1111110";
 

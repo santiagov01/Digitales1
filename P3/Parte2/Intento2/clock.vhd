@@ -42,7 +42,7 @@ signal clk_interno : std_logic :='0';
 signal count_clk : integer:=0;
 signal CLK_temp: std_logic:='0';
 
-constant PERIOD : integer := 4;
+constant PERIOD : integer := 5000000;
 begin
     process(CLK,reset,CLK_temp)
 	begin
