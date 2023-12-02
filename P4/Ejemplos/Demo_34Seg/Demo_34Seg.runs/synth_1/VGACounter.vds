@@ -1,0 +1,310 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Nov 24 15:40:05 2023
+# Process ID: 38368
+# Current directory: /home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Demo_34Seg.runs/synth_1
+# Command line: vivado -log VGACounter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGACounter.tcl
+# Log file: /home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Demo_34Seg.runs/synth_1/VGACounter.vds
+# Journal file: /home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Demo_34Seg.runs/synth_1/vivado.jou
+# Running On: PARALED02, OS: Linux, CPU Frequency: 3700.000 MHz, CPU Physical cores: 6, Host memory: 33315 MB
+#-----------------------------------------------------------
+source VGACounter.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Demo_34Seg.srcs/utils_1/imports/synth_1/VGACounter.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Demo_34Seg.srcs/utils_1/imports/synth_1/VGACounter.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top VGACounter -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 38455
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1933.641 ; gain = 371.801 ; free physical = 16263 ; free virtual = 53173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2914.113; parent = 1933.645; children = 980.469
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'VGACounter' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:53]
+INFO: [Synth 8-3491] module 'BIN2BCD_0a999' declared at '/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/BIN2BCD_0a999.vhd:25' bound to instance 'BIN2BCD' of component 'BIN2BCD_0a999' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'BIN2BCD_0a999' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/BIN2BCD_0a999.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'BIN2BCD_0a999' (0#1) [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/BIN2BCD_0a999.vhd:32]
+	Parameter LW bound to: 10 - type: integer 
+	Parameter DW bound to: 50 - type: integer 
+	Parameter DL bound to: 320 - type: integer 
+	Parameter POSX bound to: 10 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'Display' declared at '/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:25' bound to instance 'Display2' of component 'Display' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'Display' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:38]
+	Parameter LW bound to: 10 - type: integer 
+	Parameter DW bound to: 50 - type: integer 
+	Parameter DL bound to: 320 - type: integer 
+	Parameter POSX bound to: 10 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'Display' (0#1) [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:38]
+	Parameter LW bound to: 10 - type: integer 
+	Parameter DW bound to: 50 - type: integer 
+	Parameter DL bound to: 160 - type: integer 
+	Parameter POSX bound to: 520 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'Display' declared at '/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:25' bound to instance 'Display0' of component 'Display' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'Display__parameterized1' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:38]
+	Parameter LW bound to: 10 - type: integer 
+	Parameter DW bound to: 50 - type: integer 
+	Parameter DL bound to: 160 - type: integer 
+	Parameter POSX bound to: 520 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'Display__parameterized1' (0#1) [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Display.vhd:38]
+INFO: [Synth 8-3491] module 'vga_ctrl_640x480_60Hz' declared at '/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/vga_ctrl_640x480_60Hz.vhd:71' bound to instance 'Inst_vga_ctrl_640x480_60Hz' of component 'vga_ctrl_640x480_60Hz' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'vga_ctrl_640x480_60Hz' [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/vga_ctrl_640x480_60Hz.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'vga_ctrl_640x480_60Hz' (0#1) [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/vga_ctrl_640x480_60Hz.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'VGACounter' (0#1) [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:53]
+WARNING: [Synth 8-3848] Net paint1 in module/entity VGACounter does not have driver. [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/VGACounter.vhd:110]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2002.609 ; gain = 440.770 ; free physical = 16347 ; free virtual = 53257
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2983.082; parent = 2002.613; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2020.422 ; gain = 458.582 ; free physical = 16430 ; free virtual = 53299
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3000.895; parent = 2020.426; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2020.422 ; gain = 458.582 ; free physical = 16430 ; free virtual = 53299
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3000.895; parent = 2020.426; children = 980.469
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2020.422 ; gain = 0.000 ; free physical = 16429 ; free virtual = 53297
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Basys3_Master.xdc]
+Finished Parsing XDC File [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGACounter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGACounter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2176.172 ; gain = 0.000 ; free physical = 16348 ; free virtual = 53217
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2176.172 ; gain = 0.000 ; free physical = 16348 ; free virtual = 53217
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16403 ; free virtual = 53272
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16403 ; free virtual = 53272
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16403 ; free virtual = 53272
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16389 ; free virtual = 53259
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16365 ; free virtual = 53238
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1230.166; parent = 1061.473; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16248 ; free virtual = 53122
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1331.747; parent = 1163.644; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16248 ; free virtual = 53122
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1331.856; parent = 1163.763; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.407; parent = 1164.313; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.606; parent = 1164.513; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.622; parent = 1164.528; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.638; parent = 1164.544; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.653; parent = 1164.560; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.653; parent = 1164.560; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.669; parent = 1164.575; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    13|
+|3     |LUT1   |     9|
+|4     |LUT2   |    21|
+|5     |LUT3   |    29|
+|6     |LUT4   |    25|
+|7     |LUT5   |    27|
+|8     |LUT6   |    88|
+|9     |FDCE   |    10|
+|10    |FDRE   |    61|
+|11    |IBUF   |     3|
+|12    |OBUF   |    14|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16240 ; free virtual = 53113
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1332.700; parent = 1164.606; children = 168.693
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3124.629; parent = 2144.160; children = 980.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2176.172 ; gain = 458.582 ; free physical = 16288 ; free virtual = 53162
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.172 ; gain = 614.332 ; free physical = 16288 ; free virtual = 53162
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2176.172 ; gain = 0.000 ; free physical = 16279 ; free virtual = 53152
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2176.172 ; gain = 0.000 ; free physical = 16349 ; free virtual = 53223
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 43a43fb7
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 2176.172 ; gain = 912.496 ; free physical = 16559 ; free virtual = 53432
+INFO: [Common 17-1381] The checkpoint '/home/estudiante/proms/Practica4/P4_MS/Demo_34Seg/Demo_34Seg.runs/synth_1/VGACounter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file VGACounter_utilization_synth.rpt -pb VGACounter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 24 15:40:37 2023...

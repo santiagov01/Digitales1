@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1699654866">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Simple_Test_VGA_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="Simple_Test_VGA_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="Simple_Test_VGA.drc"/>
+  <File Type="BG-BGN" Name="Simple_Test_VGA.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="Simple_Test_VGA.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Simple_Test_VGA.ltx"/>
+  <File Type="RBD_FILE" Name="Simple_Test_VGA.rbd"/>
+  <File Type="NPI_FILE" Name="Simple_Test_VGA.npi"/>
+  <File Type="RNPI_FILE" Name="Simple_Test_VGA.rnpi"/>
+  <File Type="CFI_FILE" Name="Simple_Test_VGA.cfi"/>
+  <File Type="RCFI_FILE" Name="Simple_Test_VGA.rcfi"/>
+  <File Type="RDI-RDI" Name="Simple_Test_VGA.vdi"/>
+  <File Type="PDI-FILE" Name="Simple_Test_VGA.pdi"/>
+  <File Type="BITSTR-MMI" Name="Simple_Test_VGA.mmi"/>
+  <File Type="BITSTR-BMM" Name="Simple_Test_VGA_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="Simple_Test_VGA.nky"/>
+  <File Type="BITSTR-RBT" Name="Simple_Test_VGA.rbt"/>
+  <File Type="BITSTR-MSK" Name="Simple_Test_VGA.msk"/>
+  <File Type="BG-BIN" Name="Simple_Test_VGA.bin"/>
+  <File Type="BG-BIT" Name="Simple_Test_VGA.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Simple_Test_VGA_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Simple_Test_VGA_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Simple_Test_VGA_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Simple_Test_VGA_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Simple_Test_VGA_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Simple_Test_VGA_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Simple_Test_VGA_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Simple_Test_VGA_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Simple_Test_VGA_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Simple_Test_VGA_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Simple_Test_VGA_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Simple_Test_VGA_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="Simple_Test_VGA_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Simple_Test_VGA_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="Simple_Test_VGA_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Simple_Test_VGA_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Simple_Test_VGA_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="Simple_Test_VGA_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="Simple_Test_VGA_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="Simple_Test_VGA_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Simple_Test_VGA_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Simple_Test_VGA_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Simple_Test_VGA_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Simple_Test_VGA_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Simple_Test_VGA_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="Simple_Test_VGA_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="Simple_Test_VGA_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Simple_Test_VGA_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="Simple_Test_VGA_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Simple_Test_VGA_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="Simple_Test_VGA_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="Simple_Test_VGA_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Simple_Test_VGA_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Simple_Test_VGA_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Simple_Test_VGA_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="Simple_Test_VGA_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Simple_Test_VGA_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Simple_Test_VGA_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="Simple_Test_VGA_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Simple_Test_VGA_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="Simple_Test_VGA_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Simple_Test_VGA_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="Simple_Test_VGA_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="Simple_Test_VGA_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="Simple_Test_VGA_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="Simple_Test_VGA_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="Simple_Test_VGA_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="Simple_Test_VGA.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Simple_Test_VGA_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="Simple_Test_VGA_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Simple_Test_VGA_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="Simple_Test_VGA_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="Simple_Test_VGA_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="Simple_Test_VGA_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="Simple_Test_VGA.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../change_square_color/draw.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../change_square_color/vga_ctrl_640x480_60Hz.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../change_square_color/Simple_Test_VGA.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Simple_Test_VGA"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../change_square_color/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Simple_Test_VGA.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

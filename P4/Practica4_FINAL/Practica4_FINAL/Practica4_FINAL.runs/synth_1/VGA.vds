@@ -1,0 +1,457 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Dec  2 08:50:35 2023
+# Process ID: 10136
+# Current directory: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.runs/synth_1
+# Command line: vivado.exe -log VGA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA.tcl
+# Log file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.runs/synth_1/VGA.vds
+# Journal file: D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.runs/synth_1\vivado.jou
+# Running On: DESKTOP-JK32J40, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 14913 MB
+#-----------------------------------------------------------
+source VGA.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 430.496 ; gain = 160.543
+Command: read_checkpoint -auto_incremental -incremental {D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/utils_1/imports/synth_1/VGA.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/utils_1/imports/synth_1/VGA.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top VGA -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2592
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1248.125 ; gain = 410.754
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'VGA' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:61]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter ps2_debounce_counter_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'ps2_keyboard_to_ascii' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard_to_ascii.vhd:26' bound to instance 'ps2_keyboard' of component 'ps2_keyboard_to_ascii' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:312]
+INFO: [Synth 8-638] synthesizing module 'ps2_keyboard_to_ascii' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard_to_ascii.vhd:38]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter ps2_debounce_counter_size bound to: 8 - type: integer 
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter debounce_counter_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'ps2_keyboard' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard.vhd:26' bound to instance 'ps2_keyboard_0' of component 'ps2_keyboard' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard_to_ascii.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'ps2_keyboard' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard.vhd:38]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter debounce_counter_size bound to: 8 - type: integer 
+	Parameter COUNT_MAX bound to: 255 - type: integer 
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'debouncing' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/debounce.vhd:13' bound to instance 'debounce_ps2_clk' of component 'debouncing' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'debouncing' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/debounce.vhd:21]
+	Parameter COUNT_MAX bound to: 255 - type: integer 
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncing' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/debounce.vhd:21]
+	Parameter COUNT_MAX bound to: 255 - type: integer 
+	Parameter COUNT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'debouncing' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/debounce.vhd:13' bound to instance 'debounce_ps2_data' of component 'debouncing' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard_to_ascii' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/ps2_keyboard_to_ascii.vhd:38]
+INFO: [Synth 8-3491] module 'BIN2BCD_0a999' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/BIN2BCD_0a999.vhd:25' bound to instance 'BIN2BCD_1' of component 'BIN2BCD_0a999' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:324]
+INFO: [Synth 8-638] synthesizing module 'BIN2BCD_0a999' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/BIN2BCD_0a999.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'BIN2BCD_0a999' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/BIN2BCD_0a999.vhd:32]
+INFO: [Synth 8-3491] module 'BIN2BCD_0a999' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/BIN2BCD_0a999.vhd:25' bound to instance 'BIN2BCD_2' of component 'BIN2BCD_0a999' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:331]
+	Parameter LW bound to: 8 - type: integer 
+	Parameter DW bound to: 20 - type: integer 
+	Parameter DL bound to: 40 - type: integer 
+	Parameter POSX bound to: 10 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'SCORE_NUMBS' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:25' bound to instance 'Display1' of component 'SCORE_NUMBS' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:338]
+INFO: [Synth 8-638] synthesizing module 'SCORE_NUMBS' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:38]
+	Parameter LW bound to: 8 - type: integer 
+	Parameter DW bound to: 20 - type: integer 
+	Parameter DL bound to: 40 - type: integer 
+	Parameter POSX bound to: 10 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'SCORE_NUMBS' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:38]
+	Parameter LW bound to: 8 - type: integer 
+	Parameter DW bound to: 20 - type: integer 
+	Parameter DL bound to: 40 - type: integer 
+	Parameter POSX bound to: 580 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'SCORE_NUMBS' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:25' bound to instance 'Display2' of component 'SCORE_NUMBS' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'SCORE_NUMBS__parameterized1' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:38]
+	Parameter LW bound to: 8 - type: integer 
+	Parameter DW bound to: 20 - type: integer 
+	Parameter DL bound to: 40 - type: integer 
+	Parameter POSX bound to: 580 - type: integer 
+	Parameter POSY bound to: 10 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'SCORE_NUMBS__parameterized1' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd:38]
+	Parameter SG_WD bound to: 10 - type: integer 
+	Parameter DL bound to: 50 - type: integer 
+	Parameter posx bound to: 0 - type: integer 
+	Parameter posy bound to: 100 - type: integer 
+	Parameter TUP bound to: 7'b1110111 
+	Parameter TDOWN bound to: 7'b1110010 
+	Parameter TSHOOT bound to: 7'b1100101 
+INFO: [Synth 8-3491] module 'draw' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:5' bound to instance 'draw1' of component 'draw' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:366]
+INFO: [Synth 8-638] synthesizing module 'draw' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:30]
+	Parameter SG_WD bound to: 10 - type: integer 
+	Parameter DL bound to: 50 - type: integer 
+	Parameter posx bound to: 0 - type: integer 
+	Parameter posy bound to: 100 - type: integer 
+	Parameter TUP bound to: 7'b1110111 
+	Parameter TDOWN bound to: 7'b1110010 
+	Parameter TSHOOT bound to: 7'b1100101 
+INFO: [Synth 8-256] done synthesizing module 'draw' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:30]
+	Parameter SG_WD bound to: 10 - type: integer 
+	Parameter DL bound to: 50 - type: integer 
+	Parameter posx bound to: 630 - type: integer 
+	Parameter posy bound to: 100 - type: integer 
+	Parameter TUP bound to: 7'b1101001 
+	Parameter TDOWN bound to: 7'b1110000 
+	Parameter TSHOOT bound to: 7'b1101111 
+INFO: [Synth 8-3491] module 'draw' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:5' bound to instance 'draw2' of component 'draw' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:390]
+INFO: [Synth 8-638] synthesizing module 'draw__parameterized1' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:30]
+	Parameter SG_WD bound to: 10 - type: integer 
+	Parameter DL bound to: 50 - type: integer 
+	Parameter posx bound to: 630 - type: integer 
+	Parameter posy bound to: 100 - type: integer 
+	Parameter TUP bound to: 7'b1101001 
+	Parameter TDOWN bound to: 7'b1110000 
+	Parameter TSHOOT bound to: 7'b1101111 
+INFO: [Synth 8-256] done synthesizing module 'draw__parameterized1' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:30]
+	Parameter SG_WD bound to: 31 - type: integer 
+	Parameter DL bound to: 20 - type: integer 
+	Parameter posx bound to: 800 - type: integer 
+	Parameter TSHOOT bound to: 7'b1100101 
+INFO: [Synth 8-3491] module 'shoot_izq' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot.vhd:5' bound to instance 'bala1' of component 'shoot_izq' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:414]
+INFO: [Synth 8-638] synthesizing module 'shoot_izq' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot.vhd:30]
+	Parameter SG_WD bound to: 31 - type: integer 
+	Parameter DL bound to: 20 - type: integer 
+	Parameter posx bound to: 800 - type: integer 
+	Parameter TSHOOT bound to: 7'b1100101 
+WARNING: [Synth 8-614] signal 'ENABLE_TURNO' is read in the process but is not in the sensitivity list [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'shoot_izq' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot.vhd:30]
+	Parameter SG_WD bound to: 31 - type: integer 
+	Parameter DL bound to: 20 - type: integer 
+	Parameter posx bound to: 800 - type: integer 
+	Parameter TSHOOT bound to: 7'b1101111 
+INFO: [Synth 8-3491] module 'shoot_der' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot_der.vhd:5' bound to instance 'bala2' of component 'shoot_der' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:439]
+INFO: [Synth 8-638] synthesizing module 'shoot_der' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot_der.vhd:29]
+	Parameter SG_WD bound to: 31 - type: integer 
+	Parameter DL bound to: 20 - type: integer 
+	Parameter posx bound to: 800 - type: integer 
+	Parameter TSHOOT bound to: 7'b1101111 
+WARNING: [Synth 8-614] signal 'ENABLE_TURNO' is read in the process but is not in the sensitivity list [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot_der.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'shoot_der' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot_der.vhd:29]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_S' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:514]
+INFO: [Synth 8-638] synthesizing module 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:34]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'display34segm' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:34]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_A' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:528]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_N' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:541]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_T' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:554]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_I' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:567]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_M' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:580]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_A2' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:593]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_N2' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:606]
+INFO: [Synth 8-638] synthesizing module 'display34segm__parameterized2' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:34]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 37 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'display34segm__parameterized2' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:34]
+	Parameter SG_WD bound to: 3 - type: integer 
+	Parameter DL bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'display34segm' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/display34segm2.vhd:21' bound to instance 'L_U' of component 'display34segm' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:619]
+INFO: [Synth 8-3491] module 'vga_ctrl_640x480_60Hz' declared at 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/vga_ctrl_640x480_60Hz.vhd:71' bound to instance 'Inst_vga_ctrl_640x480_60Hz' of component 'vga_ctrl_640x480_60Hz' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:648]
+INFO: [Synth 8-638] synthesizing module 'vga_ctrl_640x480_60Hz' [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/vga_ctrl_640x480_60Hz.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'vga_ctrl_640x480_60Hz' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/vga_ctrl_640x480_60Hz.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (0#1) [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element posy_instante_reg was removed.  [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:66]
+WARNING: [Synth 8-3848] Net enable_shoot in module/entity draw does not have driver. [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element posy_instante_reg was removed.  [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:66]
+WARNING: [Synth 8-3848] Net enable_shoot in module/entity draw__parameterized1 does not have driver. [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element count_clk_reg was removed.  [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:276]
+WARNING: [Synth 8-6014] Unused sequential element CLK_1Hz_reg was removed.  [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:278]
+WARNING: [Synth 8-6014] Unused sequential element CLK_3_reg was removed.  [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd:303]
+WARNING: [Synth 8-7129] Port shoot_on in module shoot_der is either unconnected or has no load
+WARNING: [Synth 8-7129] Port shoot_on in module shoot_izq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enable_shoot in module draw__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port player in module draw__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enable_shoot in module draw is either unconnected or has no load
+WARNING: [Synth 8-7129] Port player in module draw is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PBTON in module VGA is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1357.199 ; gain = 519.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1357.199 ; gain = 519.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1357.199 ; gain = 519.828
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 1357.199 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Basys3_Master.xdc]
+Finished Parsing XDC File [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGA_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1390.680 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1390.680 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1390.680 ; gain = 553.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1390.680 ; gain = 553.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1390.680 ; gain = 553.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ps2_keyboard_to_ascii'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   ready |                               00 |                               00
+                new_code |                               01 |                               01
+               translate |                               10 |                               10
+                  output |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ps2_keyboard_to_ascii'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1390.680 ; gain = 553.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 13    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 4     
+	   2 Input   12 Bit       Adders := 6     
+	   2 Input   11 Bit       Adders := 128   
+	   3 Input   11 Bit       Adders := 144   
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   9 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 16    
+	               25 Bit    Registers := 4     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 31    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 8     
+	   4 Input   32 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 12    
+	  22 Input    8 Bit        Muxes := 4     
+	  35 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	  27 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 2     
+	  34 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	  14 Input    3 Bit        Muxes := 1     
+	  33 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 27    
+	   3 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port PBTON in module VGA is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 1390.680 ; gain = 553.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:34 . Memory (MB): peak = 1390.680 ; gain = 553.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1392.652 ; gain = 555.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 1397.625 ; gain = 560.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     9|
+|2     |CARRY4 |   654|
+|3     |LUT1   |   503|
+|4     |LUT2   |  1464|
+|5     |LUT3   |   154|
+|6     |LUT4   |   422|
+|7     |LUT5   |   191|
+|8     |LUT6   |   382|
+|9     |MUXF7  |    15|
+|10    |MUXF8  |     2|
+|11    |FDCE   |    33|
+|12    |FDPE   |    31|
+|13    |FDRE   |   620|
+|14    |FDSE   |    12|
+|15    |IBUF   |     6|
+|16    |OBUF   |    14|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1412.434 ; gain = 575.062
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:01:47 . Memory (MB): peak = 1412.434 ; gain = 541.582
+Synthesis Optimization Complete : Time (s): cpu = 00:01:48 ; elapsed = 00:01:54 . Memory (MB): peak = 1412.434 ; gain = 575.062
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.166 . Memory (MB): peak = 1424.523 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 671 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1428.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d9e65338
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1428.184 ; gain = 972.848
+INFO: [Common 17-1381] The checkpoint 'D:/Estudio/OneDrive - Universidad de Antioquia/Estudio/Materias/S5/Digitales I/Laboratorio/P4/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.runs/synth_1/VGA.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file VGA_utilization_synth.rpt -pb VGA_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  2 08:53:13 2023...

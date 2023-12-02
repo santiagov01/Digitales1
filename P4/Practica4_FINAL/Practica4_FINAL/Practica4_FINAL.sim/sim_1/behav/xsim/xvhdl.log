@@ -1,0 +1,20 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/BIN2BCD_0a999.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BIN2BCD_0a999'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SCORE_NUMBS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SCORE_NUMBS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/SQUARE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'draw'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debouncing'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/ps2_keyboard.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ps2_keyboard'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/ps2_keyboard_to_ascii.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ps2_keyboard_to_ascii'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'shoot_izq'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/shoot_der.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'shoot_der'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/vga_ctrl_640x480_60Hz.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'vga_ctrl_640x480_60Hz'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/estudiante/Descargas/P4_MS/Practica4_FINAL/Practica4_FINAL/Practica4_FINAL.srcs/sources_1/new/VGA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VGA'
